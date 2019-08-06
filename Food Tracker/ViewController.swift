@@ -12,8 +12,8 @@ class ViewController: UIViewController , UITextFieldDelegate , UIImagePickerCont
 //MARK: Properties
   
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class ViewController: UIViewController , UITextFieldDelegate , UIImagePickerCont
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
+     
     }
 //MARK: Actions
 
@@ -51,9 +51,7 @@ class ViewController: UIViewController , UITextFieldDelegate , UIImagePickerCont
         
         present(imagePickerController, animated: true, completion: nil)
     }
-    @IBAction func setDefaultLableText(_ sender: Any) {
-        mealNameLabel.text = "Default Text" 
-    }
+  
     
     //MARK: UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
